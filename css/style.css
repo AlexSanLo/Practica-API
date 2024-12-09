@@ -1,0 +1,10 @@
+.btn-hover {
+    text-decoration: none; 
+    background-color: black;
+    color: white;
+}
+
+.btn-hover:hover {
+    background-color: #2e1700; /* Cambia el color de fondo a marrón al pasar el ratón por encima */
+    color: white; /* Cambia el color del texto al pasar el ratón por encima */
+}
