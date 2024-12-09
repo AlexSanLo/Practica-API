@@ -1,79 +1,70 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Circuitos</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
 
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+<head>
+    <title>Circuitos</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <body class="bg-secondary">
-        <header class="bg-black row w-100">
-            <nav class="navbar navbar-expand navbar-light container">
-                <div class="container">
-                    <a class="navbar-brand ms-2" href="index.html">
-                        <img src="img/logo for a Formula 1 information website.png" alt="Logo" width="90px">
-                    </a>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-                    <div class="navbar-collapse justify-content-center">
-                        <div class="navbar-nav">
-                            <a class="nav-link text-light pe-5" aria-current="page" href="index.html">Home</a>
-                            <a class="nav-link text-light pe-5" aria-current="page" href="pilotos.html">Pilotos</a>
-                            <a class="nav-link text-light pe-0" aria-current="page" href="Info_circuito.html">Circuitos</a>
-                        </div>
+<body class="bg-secondary">
+
+    <header class="bg-black w-100">
+        <nav class="navbar navbar-expand container-fluid">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-2" href="index.html">
+                    <img src="img/logo for a Formula 1 information website.png" alt="Logo" width="90px">
+                </a>
+                <div class="navbar-collapse justify-content-center align-items-center">
+                    <div class="navbar-nav flex-row">
+                        <a class="nav-link text-light pe-5" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link text-light pe-5" aria-current="page" href="pilotos.html">Pilotos</a>
+                        <a class="nav-link text-light pe-0" aria-current="page" href="Info_circuito.html">Circuitos</a>
                     </div>
                 </div>
-            </nav>
-        </header>
-    
-        <main>
-            <section class="container">
-                <div class="d-flex justify-content-between align-items-center">
-                    <h3 class="text-light pt-4">Información de los Circuitos</h3>
-                </div>  
-                <div class="row align-items-center">
-                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                        <div class="card mt-3 border-0" style="width:18rem;">
-                            <h1 class="justify-content-center align-items-center d-flex">Nombre</h1>
-                            <div class="card-body bg-black">
-                                <h6 class="card-subtitle mb-3 text-light">Nombre: Carlos Abate</h6>
-                                <h6 class="card-subtitle mb-3 text-light">Fecha Nacimiento: 01/01/2025</h6>
-                                <h6 class="card-subtitle mb-3 text-light">Nacionalidad: Italiano</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Repetir para más cards -->
-                </div>
-            </section>
-        </main>
-        <footer class="bg-black">
-            <div class="d-flex justify-content-center align-items-center">
-               <h1 class="text-white">By Alejandro y Hugo</h1>
             </div>
-       </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="container">
+            <h3 class="text-light pt-4">Información de los Circuitos</h3>
+            <div id="CircuitosContainer" class="row align-items-center pb-4">
+                <div id="CardCircuito" class="col-sm-6 col-md-6 col-lg-4 col-xl-4" style="display: none;">
+                    <div class="card mt-3 mb-3 border-0" style="width:100%;">
+                        <h1 class="justify-content-center align-items-center d-flex" id="country"></h1>
+                        <div class="card-body bg-black">
+                            <h6 class="card-subtitle mb-3 text-light" id="locality"></h6>
+                            <h6 class="card-subtitle mb-3 text-light" id="raceName"></h6>
+                            <h6 class="card-subtitle mb-3 text-light" id="circuitName"></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-black">
+        <div class="d-flex justify-content-center align-items-center">
+            <h1 class="text-white">By Alejandro y Hugo</h1>
+        </div>
+    </footer>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="javascript/circuitos.js"></script>
+</body>
+
 </html>

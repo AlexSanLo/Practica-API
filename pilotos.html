@@ -14,14 +14,15 @@
 </head>
 
 <body class="bg-secondary">
-    <header class="bg-black row w-100">
-        <nav class="navbar navbar-expand navbar-light container">
-            <div class="container">
+
+    <header class="bg-black w-100">
+        <nav class="navbar navbar-expand container-fluid">
+            <div class="container-fluid">
                 <a class="navbar-brand ms-2" href="index.html">
                     <img src="img/logo for a Formula 1 information website.png" alt="Logo" width="90px">
                 </a>
                 <div class="navbar-collapse justify-content-center align-items-center">
-                    <div class="navbar-nav">
+                    <div class="navbar-nav flex-row">
                         <a class="nav-link text-light pe-5" aria-current="page" href="index.html">Home</a>
                         <a class="nav-link text-light pe-5" aria-current="page" href="pilotos.html">Pilotos</a>
                         <a class="nav-link text-light pe-0" aria-current="page" href="Info_circuito.html">Circuitos</a>
@@ -37,21 +38,21 @@
                 <h3 class="text-light pt-4">Información de los Pilotos</h3>
                 <a href="filtrar.html"><button class="btn bg-black mt-4 text-white">Filtrar</button></a>
             </div>  
-            <div class="row align-items-center">
-                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div id="pilotosContainer" class="row align-items-center pb-4">
+                <div id="CardPilotos" class="col-sm-6 col-md-4 col-lg-3 col-xl-3" style="display: none;">                    
                     <div class="card mt-3 border-0" style="width:18rem;">
-                        <h1 class="justify-content-center align-items-center d-flex">Nombre</h1>
+                        <h1 class="justify-content-center align-items-center d-flex" id="idPiloto"></h1>
                         <div class="card-body bg-black">
-                            <h6 class="card-subtitle mb-3 text-light">Nombre: Carlos Abate</h6>
-                            <h6 class="card-subtitle mb-3 text-light">Fecha Nacimiento: 01/01/2025</h6>
-                            <h6 class="card-subtitle mb-3 text-light">Nacionalidad: Italiano</h6>
+                            <h6 class="card-subtitle mb-3 text-light" id="nombre"></h6>
+                            <h6 class="card-subtitle mb-3 text-light" id="fechaNacimiento"></h6>
+                            <h6 class="card-subtitle mb-3 text-light" id="nacionalidadCard"></h6>
                         </div>
                     </div>
                 </div>
-                <!-- Repetir para más cards -->
             </div>
         </section>
     </main>
+    
     <footer class="bg-black">
          <div class="d-flex justify-content-center align-items-center">
             <h1 class="text-white">By Alejandro y Hugo</h1>
