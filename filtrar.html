@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Filtrar pilotos</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -29,23 +29,59 @@
                     </a>
                     <div class="navbar-collapse justify-content-center align-items-center">
                         <div class="navbar-nav flex-row">
-                            <a class="nav-link text-light pe-5" aria-current="page" href="index.html">Home</a>
-                            <a class="nav-link text-light pe-5" aria-current="page" href="pilotos.html">Pilotos</a>
-                            <a class="nav-link text-light pe-0" aria-current="page" href="Info_circuito.html">Circuitos</a>
+                            <a class="nav-link text-light pe-4" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link text-light pe-4" aria-current="page" href="pilotos.html">Pilotos</a>
+                            <a class="nav-link text-light pe-4" aria-current="page" href="Info_circuito.html">Circuitos</a>
+                            <a class="nav-link text-light pe-0" aria-current="page" href="filtrar.html">Filtrar</a>
                         </div>
                     </div>
                 </div>
             </nav>
         </header>
 
-        <main></main>
+        <main>
+            <section class="container">
+                <div class="mt-2 mb-4">
+                    <h4 class="text-light">Filtrar Pilotos:</h4>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <select id="OpcionesNacionalidad" class="form-select">
+                                <option value="Todas">Todas</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="filtroNombre" type="text" class="form-control" placeholder="Escriba aquí el nombre">
+                        </div>
+                        <div class="col-md-2">
+                            <button id="btn-filtrar" class="btn btn-hover w-100">Filtrar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>  
+            <section class="container">
+                <div id="pilotosContainer" class="row align-items-center pb-4">
+                    <div id="CardPiloto" class="col-sm-6 col-md-4 col-lg-3 col-xl-3" style="display: none;">                    
+                        <div class="card mt-3 border-0 h-100"> 
+                            <h1 class="justify-content-center align-items-center d-flex" id="idPiloto"></h1>
+                            <div class="card-body bg-black d-flex flex-column justify-content-between"> 
+                                <h6 class="card-subtitle mb-3 text-light" id="nombre"></h6>
+                                <h6 class="card-subtitle mb-3 text-light" id="fechaNacimiento"></h6>
+                                <h6 class="card-subtitle mb-3 text-light" id="nacionalidadCard"></h6>
+                                <a href="" class="card-subtitle mb-3 text-light" id="enlaceWiki">Wikipedia</a>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </section>
+            
+        </main>
         
         <footer class="bg-black">
             <div class="d-flex justify-content-center align-items-center">
                <h1 class="text-white">By Alejandro y Hugo</h1>
             </div>
        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
+       <script src="javascript/pilotosFiltrados.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -57,5 +93,6 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+
     </body>
 </html>

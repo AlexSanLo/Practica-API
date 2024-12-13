@@ -45,3 +45,5 @@ function createCard(piloto) {
 }
 
 document.addEventListener('DOMContentLoaded', fetchpilotos);
+
+
